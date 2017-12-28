@@ -148,7 +148,7 @@ python trees_from_MSA.py [dir_w_orthofinder_results] > tfm.out 2> tfm.err
 
 ##### Note 12/22/17: Based on the results of orthofinder, we determined the minimum-number of taxa to be 20 species, or 80% of the 25 species. 
 
-#### 2.7 We will use the script ```filter_ogs_write_scripts.pl``` (available in the scripts directory of the DEEPC repository: https://github.com/josephryan/2017-DEEPC_Ctenophora/tree/master/scripts) to retain the orthogroup fasta files that contain a the user-specified minimum number of taxa determined above. Lastly, ```filter_ogs_write_scripts.pl``` automates the following processes: 
+#### 2.7 We will use the script ```filter_ogs_write_scripts.pl``` (available in the scripts directory of the DEEPC repository: https://github.com/josephryan/2017-DEEPC_Ctenophora/tree/master/scripts) to retain the orthogroup fasta files that contain the user-specified minimum number of taxa determined above. Lastly, ```filter_ogs_write_scripts.pl``` automates the following processes: 
 
 2.7.1 sequences within each orthogroup are aligned using Mafft v7.309 
 

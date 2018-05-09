@@ -131,7 +131,7 @@ blastp -query [infile.pep.fa] -db ai.fa -outfmt 6 -max_target_seqs 1000 -seg yes
 remove_aliens.pl [out.alien_index] [original_transcriptome.fa] > [filtered_transcriptome.fa] > ra.out 2> ra.err
 ```
 
-#### 2.6 We will identify orthogroups across holothurian transcriptomes with OrthoFinder v1.1.8 (Emms & Kelly 2015).
+#### 2.6 We will identify orthogroups across holothurian transcriptomes with OrthoFinder v2.1.2 (Emms & Kelly 2015).
 
 ```
 orthofinder -f [dir_w_protein_fast_files] -op > of.out 2> of.err

@@ -179,7 +179,7 @@ python trees_from_MSA.py [dir_w_orthofinder_results] > tfm.out 2> tfm.err
 
 2.8.4 We will use IQ-TREE v1.6.3 (Nguyen et al. 2014) to estimate maximum-likelihood orthogroup gene trees. 
 
-```IQ-TREE-omp -s [infile.mafft-gb] -nt AUTO -bb 1000 -m LG -pre [output prefix] > iq.out 2> iq.err```
+```iqtree -s [infile.mafft-gb] -nt AUTO -bb 1000 -m LG -pre [output prefix] > iq.out 2> iq.err```
 
 2.8.5 We will use PhyloTreePruner v1.0 (Kocot et al. 2013) to prune the orthogroups with multiple sequences.
 
@@ -208,7 +208,7 @@ Then we will execute the ```post_parapruner.pl``` script which can be found in t
 2.10.1 Concatenated matrix, Maximum Likelihood. We will estimate a bootstrapped (1000 ultrafast replicates) species phylogeny in IQ-TREE v1.6.3 using the concatenated dataset. We will use the flag -m TEST to find best partition scheme and the flag -nt AUTO to determine the appropriate number of threads to use for the analysis. The partition file will be created with the script ```fasta2phylomatrix```, which is available in the scripts repository.
 
 ```
-IQ-TREE-omp –s [infile] –pre [outfile_prefix] –spp [partition file] -nt AUTO –m TEST –bb 1000 > iqo.out 2> iqo.err
+iqtree –s [infile] –pre [outfile_prefix] –spp [partition file] -nt AUTO –m TEST –bb 1000 > iqo.out 2> iqo.err
 ```
 2.10.2 As an alternative method, we will apply the posterior mean site frequency (PMSF) model in IQ-TREE (Wang et al. 2017) to this dataset. We will use the ML tree generated from 2.10.1 as our guide tree for this analysis. 
 
@@ -221,7 +221,7 @@ iqtree -s <alignment> -m LG+C60+F+G -ft <guide_tree> -b100
 > i) Generate individual maximum-likelihood gene trees in IQ-TREE. 
 
 ```
-IQ-TREE-omp –nt AUTO –s [infile] –pre [prefix_for_outfiles] –m MFP+MERGE –bb 1000 > iq.out 2> iq.err
+iqtree –nt AUTO –s [infile] –pre [prefix_for_outfiles] –m MFP+MERGE –bb 1000 > iq.out 2> iq.err
 ```
 
 > ii) ASTRAL-III constrains the search space to those species trees that derive their bipartitions from the input gene trees

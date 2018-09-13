@@ -341,9 +341,12 @@ Zhang, Chao, Erfan Sayyari, and Siavash Mirarab. “ASTRAL-III: Increased Scalab
 
 ## APPENDIX
 
-Version&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Date&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Significant Revisions  
+Version&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Date&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Significant Revisions
+
 1.0 22 December 2017
+
 2.0 25 April 2018
+
 2.1 13 September 2018 
 
 

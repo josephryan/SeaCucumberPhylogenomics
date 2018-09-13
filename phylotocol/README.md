@@ -347,6 +347,6 @@ Version&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Date&nbsp
 
 2.0 25 April 2018
 
-2.1 13 September 2018 
+2.1 13 September 2018 Added sections 2.8.6 through 2.8.7 and associated perl scripts to the script repository
 
 

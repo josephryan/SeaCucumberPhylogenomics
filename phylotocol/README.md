@@ -71,26 +71,10 @@ cat SRR[number].unp.fq >> all_1.fq
 ln -s SRR[number].2.fq.gz all_2.fq.gz
 ```
 
-2.2.2 Use the script ```fix_names.pl``` (available as a script within the JFR Perl Modules distribution (as of v1.1):  https://github.com/josephryan/JFR-PerlModules) to change the deflines of the SRA files so that they are formatted properly for transcriptome assembly with Trinity.
-
-```
-perl fix_names.pl SRR[number].1.fq.gz SRR[number].2.fq.gz SRR[number].unp.fq.gz > fix_sra_names.out 2> fix_sra_names.err
-```
-
 2.2.3 We will perform *de novo* transcriptome assembly with Trinity v2.4.0 (Grabherr et al. 2011).  
 
 ```
 /usr/local/trinityrnaseq-Trinity-v2.4.0/Trinity --seqType fq --max_memory 750G --CPU 10 --left ./SRR[number].1.fq.renamed --right ./SRR[number].2.fq.renamed --full_cleanup --normalize_reads --normalize_max_read_cov 30 > trin.out 2> trin.err &
-```
-
-2.2.4 Use RSEM (Li and Dewey, 2011) to measure the gene and isoform abundance. The script `align_and_estimate_abundance.pl` is included as a part of the Trinity package. The script `rsemgetbestseqs.py` is available from Warren Francis’ BitBucket page: https://bitbucket.org/wrf/sequences/src
-
-```
-align_and_estimate_abundance.pl --transcripts ./trinity_out_dir.Trinity.fasta --seqType fq --left ./SRR[number].1.fq.gz --right ./SRR[number].2.fq.gz --output_dir aea --est_method RSEM --aln_method bowtie2 --thread_count 100 --prep_reference > aea.out 2> aea.err &
-```
-
-```
-rsemgetbestseqs.py ./aea/RSEM.isoforms.results ./trinity_out_dir.Trinity.fasta > rgbs.out 2> rgbs.err &
 ```
 
 #### 2.3 We will check assembly using BUSCO on the website gVolante (https://gvolante.riken.jp/) to assess transcriptome assembly. We will use the following parameters: 
@@ -349,4 +333,5 @@ Version&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Date&nbsp
 
 2.1 13 September 2018 Added sections 2.8.6 through 2.8.7 and associated perl scripts to the script repository
 
+2.2 4 April 2025 – Removed several superfluous details. 
 

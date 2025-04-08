@@ -1,12 +1,18 @@
 # SeaCucumberPhylogenomics
 Sea cucumber phylogenomics
 
-### Scripts
+### phylotocol
 
-Scripts used in these analyses
+Directory with a priori planned analyses for this study along with any changes that were made following releases of this document.
 
-### Phylotocol
+### scripts
 
-A priori planned analyses for this study along with any changes that were made following releases of this document.
+Directory with scripts used in these analyses
+
+### treefiles
+
+Directory with newick-formatted tree, alignmnet, partition file, iqtree command
 
 ### LICENSE
+
+License for all software in this repository
